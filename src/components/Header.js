@@ -1,4 +1,6 @@
 import React from 'react';
+import {useDispatch , useSelector} from 'react-redux';
+import home from '../redux/actions/home'
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -27,13 +29,15 @@ const AppBar = styled(MuiAppBar, {
   }));
 
 function Header(props){
+  const homeState = useSelector((state)=> state.home); 
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
+  const dispatch = useDispatch();
   const handleDrawerOpen = () => {
-
+    dispatch(home.handleSidebarState(true));
   };
     return (
-        <AppBar position="fixed" open={open}>
+        <AppBar position="fixed" open={homeState.sidebarInitialState}>
         <Toolbar>
         <IconButton
           color="inherit"

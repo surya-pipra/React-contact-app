@@ -3,7 +3,8 @@ export const initialState = {
   logindata: [],
   inventoryTableData: [],
   inventoryDeviceByAsic: [],
-  apiError: ''
+  apiError: '',
+  sidebarInitialState: false,
 };
 
 function home(state = initialState, action) {
@@ -12,8 +13,8 @@ function home(state = initialState, action) {
       return { ...state, isLoading: true };
     case homeTypes.LOGIN_USER_SUCCESS:
       return { ...state, logindata: action.payload }
-    // case homeTypes.HEALTH_MODELS_FILTER:
-    //   return { ...state, healthModelsFilter: action.payload }
+    case homeTypes.SIDEBAR_ACTION:
+      return { ...state, sidebarInitialState: action.payload }
     default:
       return { ...state };
   }

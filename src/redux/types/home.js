@@ -1,6 +1,7 @@
 const homeTypes = {
     LOGIN_USER: "LOGIN_USER",
     LOGIN_USER_SUCCESS: "LOGIN_USER_SUCCESS",
-    LOGIN_ERROR: "LOGIN_ERROR"
+    LOGIN_ERROR: "LOGIN_ERROR",
+    SIDEBAR_ACTION: "SIDEBAR_ACTION"
 };
   export default homeTypes;

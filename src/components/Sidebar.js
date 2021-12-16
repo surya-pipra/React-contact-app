@@ -1,4 +1,7 @@
 import React from 'react';
+import {useDispatch, useSelector } from 'react-redux';
+import home from '../redux/actions/home'
+
 import { Link } from 'react-router-dom';
 import { styled, useTheme } from '@mui/material/styles';
 import MuiDrawer from '@mui/material/Drawer';
@@ -65,12 +68,16 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 
 
 
-function Sidebar(props){  
+function Sidebar(props){ 
+  const dispatch = useDispatch();
+
+  const homeState = useSelector((state)=> state.home); 
+  
   // console.log(props);
   // debugger
   // props.opensideMenu();
   const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
+  // const [open, setOpen] = React.useState(false);
 
 
   // const handleDrawerOpen = () => {
@@ -78,10 +85,11 @@ function Sidebar(props){
   // };
 
   const handleDrawerClose = () => {
-    setOpen(false);
+    dispatch(home.handleSidebarState(false));
   };
+  
     return (
-        <Drawer variant="permanent" open={open}>
+        <Drawer variant="permanent" open={homeState.sidebarInitialState}>
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
