@@ -17,9 +17,11 @@ function AboutUs() {
     }
     return (
         <Box sx={{ display: 'flex' }}>
-            <Header openSideMenu={(item) => opensideMenu(item)}></Header>
-            <Sidebar openSideMenu={(data) => opensideMenu()}></Sidebar>
+            <Header></Header>
+            <Sidebar></Sidebar>
+            <div className="container">
             <h1>ABOUT US</h1>
+            </div>
         </Box>
     );
 }

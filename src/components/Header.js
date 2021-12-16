@@ -29,13 +29,8 @@ const AppBar = styled(MuiAppBar, {
 function Header(props){
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
-
   const handleDrawerOpen = () => {
-    props.openSideMenu({
-        'name':'surya',
-        'value':'222'
-    });
-    // setOpen(true);
+
   };
     return (
         <AppBar position="fixed" open={open}>

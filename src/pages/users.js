@@ -9,17 +9,13 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 
 function User() {
-    function opensideMenu(item) {
-    }
-
-    function ToopensideMenu(item) {
-        opensideMenu(item);
-    }
     return (
         <Box sx={{ display: 'flex' }}>
-            <Header openSideMenu={(item) => opensideMenu(item)}></Header>
-            <Sidebar openSideMenu={(data) => opensideMenu()}></Sidebar>
-            <h1>USERS</h1>
+            <Header></Header>
+            <Sidebar></Sidebar>
+            <div className="container">
+                <h1>USERS</h1>
+            </div>
         </Box>
     );
 }

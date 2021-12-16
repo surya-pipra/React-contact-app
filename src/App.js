@@ -43,15 +43,13 @@ function App() {
     //     </Provider>
     //   </ThemeProvider>
     // </Box>
-    <ThemeProvider>
+    // <ThemeProvider>
     <Provider store={store}>
     <Router >
       <AppRouter />
     </Router>
     </Provider>
-  </ThemeProvider>
-    
-
+  // </ThemeProvider>
   );
 }
 

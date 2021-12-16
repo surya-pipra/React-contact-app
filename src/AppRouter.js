@@ -4,6 +4,7 @@ import { BrowserRouter as Router, useRoutes,Navigate } from "react-router-dom";
 import HOME from './pages/home';
 import ABOUT from './pages/about';
 import USERS from './pages/users';
+import LOGIN from './pages/login';
 
 
 const AppRouter = () => {
@@ -15,6 +16,7 @@ const AppRouter = () => {
         { path: "/home", element:<HOME/> },
         { path: "/about", element:<ABOUT/> },
         { path: "/users", element:<USERS/> },
+        { path: "/login", element:<LOGIN/> },
     ]);
       return routes;
   
