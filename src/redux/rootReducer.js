@@ -3,7 +3,6 @@ import home from './reducers/home';
 
 const appReducer = combineReducers({home});
 
-
 // reset the state of a redux store
 const rootReducer = (state, action) => {
     if (action.type === 'CLEAR_STATE') {

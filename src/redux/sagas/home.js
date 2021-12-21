@@ -4,6 +4,7 @@ import home from "../actions/home";
 import axios from "../../services/axios";
 
 function* LoginUser({ payload }) {
+    debugger
     try {
         if (payload.email && payload.password) {
             const res = yield call(axios.request, {
@@ -13,10 +14,7 @@ function* LoginUser({ payload }) {
 
             });
             localStorage.setItem('user', JSON.stringify(res));
-            localStorage.setItem('selecttime', JSON.stringify({ name: "500d", value: "Last 7 Days" }));
             yield put(home.LoginUserSuccess(res))
-
-
         }
     }
     catch (err) {

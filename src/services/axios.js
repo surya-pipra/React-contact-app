@@ -2,7 +2,7 @@ import axios from "axios";
 import store from '../redux/store';
 import homeAction from "../redux/actions/home";
 const axiosInstance = axios.create({
-  baseURL: "http://ec2-13-57-176-206.us-west-1.compute.amazonaws.com:3001/api",
+  baseURL: "http://localhost:3001/api",
     headers: {
     "Content-Type": "application/json"
   },

@@ -7,6 +7,8 @@ import Header from './components/Header'
 import Box from '@mui/material/Box';
 import { listItemButtonClasses } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
+import { theme } from "./styles/theme";
+
 // import { theme } from "./styles/theme";
 import AppRouter from './AppRouter';
 
@@ -43,13 +45,13 @@ function App() {
     //     </Provider>
     //   </ThemeProvider>
     // </Box>
-    // <ThemeProvider>
-    <Provider store={store}>
-    <Router >
-      <AppRouter />
-    </Router>
-    </Provider>
-  // </ThemeProvider>
+    <ThemeProvider theme={theme}>
+      <Provider store={store}>
+        <Router >
+          <AppRouter />
+        </Router>
+      </Provider>
+    </ThemeProvider>
   );
 }
 

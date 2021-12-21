@@ -1,6 +1,7 @@
 import homeTypes from "../types/home";
 
 function LoginUser(payload) {
+  debugger
   return {
     type: homeTypes.LOGIN_USER,
     payload
@@ -8,6 +9,7 @@ function LoginUser(payload) {
 }
 
 function LoginUserSuccess(payload) {
+  debugger
   return {
     type: homeTypes.LOGIN_USER_SUCCESS,
     payload

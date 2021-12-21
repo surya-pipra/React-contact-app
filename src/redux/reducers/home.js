@@ -8,6 +8,7 @@ export const initialState = {
 };
 
 function home(state = initialState, action) {
+  debugger
   switch (action.type) {
     case homeTypes.LOGIN_USER:
       return { ...state, isLoading: true };
